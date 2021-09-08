@@ -1,0 +1,47 @@
+body{
+
+   background-color: black;
+}
+.all-img{
+    cursor: pointer;
+}
+.layre{
+
+background-color: rgba(0, 0, 0, 0.5);
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+
+}
+.layre-img{
+
+    background-image: url(../images/pexels-artem-beliaikin-853199.jpg);
+    background-position: center center;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 50%;
+}
+.far{
+    font-size: 2rem;
+    color: aliceblue;
+    cursor: pointer;
+}
+.fa-times-circle{
+    top: 5%;
+    right: 5%;
+}
+.original_title{
+color: white;
+}
+.trending-title{
+
+
+}
+.trending-title h1{
+
+
+    font-size: 4rem !important;
+}

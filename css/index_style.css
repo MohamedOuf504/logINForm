@@ -1,0 +1,40 @@
+body{
+
+background-image: url(../images/pexels-photo-934062.jpeg);
+background-position: center center;
+background-size: 100% 100%;
+background-attachment: fixed;
+scroll-behavior: smooth;
+}
+.log-form{
+    background-color:rgba(255, 255, 255, 0.5);
+}
+.forgot-form{
+    background-color:rgba(255, 255, 255, 0.9) !important;
+
+
+}
+.social-container {
+    margin: 20px 0;
+  }
+  
+  .social-container a {
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+  }
+
+.forgot-pass{
+    cursor: pointer;
+}
+.far{
+  top: 5%;
+  right: 5%;
+  font-size: large;
+  cursor: pointer;
+}

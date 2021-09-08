@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+      <section class="vh-100">
+          <div class="container row m-auto  justify-content-center h-100  align-items-center">
+              <div class="forgot-form shadow-lg  d-none col-md-6 ">
+                  <div class=" h-100 d-flex flex-column  py-5 p-3 position-relative ">
+                                            <i class="far close-icon fa-times-circle position-absolute"></i>
+
+                    <h4>
+                      Enter your Email 
+                    </h4>
+                    <input  id="EmailForReset" class="form-control w-75" type="text" placeholder="Email">
+                    <h4 >Enter your Answer For  Security Question </h4>
+                    <div class="p-1 w-75">
+                      <input  id="AnswerForReset" class="form-control " type="text" placeholder="Answer">
+
+                    </div>
+
+                    <div class="p-1 w-75">
+
+                        <input  id="Newpass" class="form-control    " type="password" placeholder="New Password">
+                      </div>
+                      <div  class="  p-1 w-75">
+
+                        <input  id="Re-Newpass"  class="form-control " type="password" placeholder="Re-Password">
+                      </div>
+                      <div class="my-2 p-2">
+                          <button id="ResetPass" class="  btn btn-success"> confirm</button>
+                      </div>
+                  </div> 
+              </div>
+                <div class=" message-chenge-pass d-none col-md-6">
+                    <div class="alert alert-success ">
+                        <h1>Done</h1>
+                        <h2>
+                            Password reset success
+                        </h2>
+                        <button class="btn btn-success  p-3 m-2">Ok</button>
+                    </div>
+                    <div class="alert alert-danger message-chenge-pass-feild  d-none">
+                        <h1>Failed</h1>
+                        <h2>
+                            Failed to reset password                    
+                        </h2>
+
+                        <button class="btn btn-danger p-3 m-2">Ok</button>
+
+                    </div>
+                </div>
+                <div class="log-form  col-md-6  shadow-lg  d-flex  align-items-center  flex-column  p-md-5 py-3  ">
+                   
+                        <ul class="nav nav-pills " id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="  nav-link active " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Sign in</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Sign up</button>
+                            </li>
+                          </ul>
+                   
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="py-4 text-center">
+                                    <h1 class="fw-bold">
+                                        Sign in
+                                    </h1>
+                                    <div class="social-container">
+                                        <a href="#" class="social text-decoration-none text-dark "><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="social  text-decoration-none text-dark"><i class="fab fa-google-plus-g"></i></a>
+                                        <a href="#" class="social  text-decoration-none text-dark"><i class="fab fa-linkedin-in"></i></a>
+                                      </div>
+                                      <h6 >
+                                          or ues your account
+                                      </h6>
+                                      <div class="p-2">
+                                        <input  id="signInEmail" class="form-control" type="text" placeholder="User Name">
+
+                                      </div>
+                                      <div class=" p-2">
+                                        <input   id="signInPass" class="form-control" type="password" placeholder="Password">
+                                      </div>
+                                      <h6 class="p-3 forgot-pass"  > 
+                                          Forgot your Password ?
+                                      </h6>
+                                      <button id="signInBtn" class="btn btn-outline-primary px-5  rounded-pill">SINGN IN</button>
+                                      <h5 id="massgeLogin" class="p-3  d-none   text-danger ">
+                                        Login failed
+                                      </h5>
+
+                                </div>
+
+
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                            <div class="py-4 text-center">
+                                <h1 class="fw-bold">
+                                    Sign up
+                                </h1>
+                                <div class="social-container">
+                                    <a href="#" class="social text-decoration-none text-dark "><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social  text-decoration-none text-dark"><i class="fab fa-google-plus-g"></i></a>
+                                    <a href="#" class="social  text-decoration-none text-dark"><i class="fab fa-linkedin-in"></i></a>
+                                  </div>
+                                  <h6 >
+                                      or ues your account
+                                  </h6>
+                                  <div class="p-1 ">
+                                    <input  id="userNameInput"   class="form-control" type="text" placeholder="User Name">
+
+                                  </div>
+                                  <div>
+
+                                  </div>
+                                  <div class="p-1">
+                                    <input  id="userEmailInput"  class="form-control" type="text" placeholder="Email">
+
+                                  </div>
+                                  <div class=" p-1">
+                                    <input   id="passWordInput" class="form-control" type="password" placeholder="Password">
+                                  </div>
+                                  <div class=" p-1">
+                                    <input  id="rePasswordInput"  class="form-control" type="password" placeholder="Re-Password">
+                                  </div>
+                                  <div class="p-1">
+                                      
+                                    <select class=" form-select" id="Questions">
+                                        <option value="What is your mother's maiden name?">What is your mother's maiden name?
+                                        </option>
+                                        <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+                                        <option value="What was your first car?">What was your first car?</option>
+                                    </select>
+                                  </div>
+                                  <div class=" p-1">
+                                    <input  id="answerQuestion"  class="form-control" type="text" placeholder="Answer">
+                                  </div>
+                                  <button id="BtnSingUP" class="btn btn-outline-primary px-5  m-3 rounded-pill">SINGN UP</button>
+
+                                  <h5 id="confirmMessage" class="">
+                                  </h5>
+
+                            </div>
+
+                        </div>
+                      </div>
+                </div>
+
+          </div>
+      </section>
+   
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
