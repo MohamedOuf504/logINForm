@@ -1,14 +1,14 @@
-var y =document.querySelectorAll(".qq")
-var imgOfGallary = Array.from(document.querySelectorAll(" .img-gallary img"))
+var y = document.querySelectorAll(".qq")
+var imgOfGallary = Array.from(document.querySelectorAll(".img-gallary img"))
 var layreOfGallary = document.querySelector('.layre')
 var covarOflayre = document.querySelector('.layre .layre-img')
 var Allphoto = document.querySelector('.all-img ')
-var imgX =document.querySelectorAll("img")
+var imgX = document.querySelectorAll("img")
 var currantIndex;
 var next = document.querySelector(".fa-arrow-alt-circle-right")
 var prev = document.querySelector(".fa-arrow-alt-circle-left")
 var exit = document.querySelector(".fa-times-circle")
-var btnLogOut=document.querySelector("#LogOut-Btn")
+var btnLogOut = document.querySelector("#LogOut-Btn")
 next.addEventListener("click", nextSlide)
 prev.addEventListener("click", prevSlide)
 exit.addEventListener("click", esc)
@@ -22,34 +22,41 @@ http.addEventListener("readystatechange", function () {
     if (http.readyState == 4 && http.status == 200) {
 
         ImagesFromApi = JSON.parse(http.response)
-        ImagesFromApi=ImagesFromApi.results
+        ImagesFromApi = ImagesFromApi.results
         displayImg();
     }
 })
 
-var x =new Image
-var z = []
+
+
 function displayImg() {
 
-     var allImg = ""
-     for(var i = 0 ;i<ImagesFromApi.length ;i++)
-     {
-         allImg +=
-         `<div class="col-md-4 p-3 ">
+
+
+    var allImg = ""
+    for (var i = 0; i < ImagesFromApi.length; i++) {
+        allImg +=
+            `<div class="col-md-4 p-3 ">
          <div class="img-gallary  shadow-lg">
-             <img onclick="dispaly()"  src="https://image.tmdb.org/t/p/w500${ImagesFromApi[i].poster_path}"   class="img-fluid qq" alt="">
+             <img src="https://image.tmdb.org/t/p/w500${ImagesFromApi[i].poster_path}"   class="img-fluid qq" alt="">
              <h4 class="  original_title  m-1">${ImagesFromApi[i].original_title}</h4>
              <h4 class="  original_title  "> vote_average :- ${ImagesFromApi[i].vote_average}</h4>
 
          </div>
      </div>
          `
-         x.src=`https://image.tmdb.org/t/p/w500${ImagesFromApi[i].poster_path}`
-         z.push(x)
-         
-     }
+        
+    }
 
-    Allphoto.innerHTML=allImg
+    for (let i = 0; i < imgOfGallary.length; i++) {
+
+    }
+
+    Allphoto.innerHTML = allImg
+
+    imgOfGallary = Array.from( document.querySelectorAll(".img-fluid"));
+    console.log(imgOfGallary);
+    test();
 
 
 }
@@ -68,14 +75,18 @@ function displayImg() {
 
 
 
+function test(){
+    
 for (var i = 0; i < imgOfGallary.length; i++) {
     imgOfGallary[i].addEventListener("click", display)
 }
+}
+
 function display(e) {
-    var currantImg = e.target.src
-        currantIndex = imgOfGallary.indexOf(e.target)
-        layreOfGallary.classList.remove("d-none")
-        covarOflayre.style.backgroundImage = `url(${currantImg})`
+    var currantImg = e.target.src;
+    currantIndex = imgOfGallary.indexOf(e.target)
+    layreOfGallary.classList.remove("d-none")
+    covarOflayre.style.backgroundImage = `url(${currantImg})`
 }
 
 
@@ -109,15 +120,12 @@ function esc() {
 }
 
 
-function search(val)
-{               
+function search(val) {
     var allImg = ""
-for(var i = 0 ;i<x.length ;i++)
-{
-        if(x[i].original_title.includes(val))
-        {
+    for (var i = 0; i < x.length; i++) {
+        if (x[i].original_title.includes(val)) {
             allImg +=
-            `<div class="col-md-4 p-3">
+                `<div class="col-md-4 p-3">
             <div class="img-gallary">
                 <img " src="https://image.tmdb.org/t/p/w500${x[i].poster_path}"   class="img-fluid x" alt="">
                
@@ -126,15 +134,10 @@ for(var i = 0 ;i<x.length ;i++)
         </div>
             `
         }
-        Allphoto.innerHTML=allImg
+        Allphoto.innerHTML = allImg
     }
 }
-
-
-
-
-btnLogOut.addEventListener("click",logOut)
-function logOut()
-{
-    window.location.href="index.html"
+btnLogOut.addEventListener("click", logOut)
+function logOut() {
+    window.location.href = "index.html"
 }
